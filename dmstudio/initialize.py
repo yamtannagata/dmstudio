@@ -124,10 +124,11 @@ def _make_dmdir():
     dmdir_f.write("\n")
 
     for infile in glob.glob("*.dm"):
-        outname = np.str.split(infile, '.')[0]
+        outname = infile.split('.')[0]
         dmdir_f.write('_'+ outname + "_='" + outname + "'\n")
 
     dmdir_f.close()
+
 
 
 
